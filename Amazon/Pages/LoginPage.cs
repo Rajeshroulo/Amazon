@@ -35,7 +35,7 @@ namespace Amazon.Pages
         {
             Thread.Sleep(5000);
             signin.Click();
-            Thread.Sleep(3000);
+            Thread.Sleep(8000);
             mail.SendKeys(email);
             continueButton.Click();
             Thread.Sleep(5000);

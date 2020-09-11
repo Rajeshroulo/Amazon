@@ -1,17 +1,14 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Amazon.Pages
 {
-   public class HomePage
-   {
+    public class HomePage
+    {
 
         public IWebDriver driver;
         public HomePage(IWebDriver driver)
@@ -43,18 +40,19 @@ namespace Amazon.Pages
         {
             searchBox.SendKeys(ConfigurationManager.AppSettings["Model"]);
             search.Click();
-            Thread.Sleep(9000);
+            Thread.Sleep(15000);
             onePlus.Click();
             List<string> windows = driver.WindowHandles.ToList();
             foreach (var mobilewindow in windows)
             {
                 driver.SwitchTo().Window(mobilewindow);
             }
-            Thread.Sleep(5000);
+            Thread.Sleep(8000);
             buyNow.Click();
+            Thread.Sleep(10000);
             passWord.SendKeys(password);
             login.Click();
             Thread.Sleep(5000);
         }
-   }
+    }
 }

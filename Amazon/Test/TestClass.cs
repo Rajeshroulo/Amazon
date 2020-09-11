@@ -22,5 +22,13 @@ namespace Amazon.Test
             var search = new HomePage(driver);
             search.SearchMobile(data.password);       
        }
+
+       [Test,Order(3)]
+       public void DeliveryAddress()
+       {
+            var address = new AddressPage(driver);
+            address.EnterAddress();
+            address.AddAddress();
+       }
     }
 }
