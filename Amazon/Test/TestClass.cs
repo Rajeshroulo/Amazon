@@ -8,7 +8,8 @@ namespace Amazon.Test
     public class TestClass : BaseClass
     {
         UserData data = new UserData();
-      [Test,Order(1)]  
+
+       [Test,Order(1)]  
        public void AccountLogin()
        {
             var login = new LoginPage(driver);

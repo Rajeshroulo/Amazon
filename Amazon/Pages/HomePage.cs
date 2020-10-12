@@ -20,11 +20,11 @@ namespace Amazon.Pages
         [FindsBy(How = How.XPath, Using = "//input[@id='twotabsearchtextbox']")]
         public IWebElement searchBox;
 
-        [FindsBy(How = How.XPath, Using = "//header//div[2]//div[1]//input[1]")]
+        [FindsBy(How = How.XPath, Using = "//header/div[@id='navbar']/div[@id='nav-belt']/div[2]/div[1]/form[1]/div[3]/div[1]/span[1]/input[1]")]
         public IWebElement search;
 
-        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'OnePlus 7 (Mirror Grey, 6GB RAM, Optic AMOLED Disp')]")]
-        public IWebElement onePlus;
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Samsung Guru Music 2 (SM-B310E, Blue)')]")]
+        public IWebElement samsung;
 
         [FindsBy(How = How.XPath, Using = "//input[@id='buy-now-button']")]
         public IWebElement buyNow;
@@ -38,10 +38,11 @@ namespace Amazon.Pages
 
         public void SearchMobile(string password)
         {
-            searchBox.SendKeys(ConfigurationManager.AppSettings["Model"]);
+            searchBox.SendKeys("samsung guru music 2");
+            Thread.Sleep(2000);
             search.Click();
-            Thread.Sleep(15000);
-            onePlus.Click();
+            Thread.Sleep(10000);
+            samsung.Click();
             List<string> windows = driver.WindowHandles.ToList();
             foreach (var mobilewindow in windows)
             {
@@ -49,10 +50,8 @@ namespace Amazon.Pages
             }
             Thread.Sleep(8000);
             buyNow.Click();
-            Thread.Sleep(10000);
-            passWord.SendKeys(password);
-            login.Click();
             Thread.Sleep(5000);
+            
         }
     }
 }
