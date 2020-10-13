@@ -21,7 +21,7 @@ namespace Amazon.Test
        public void MobileSearch()
        {
             var search = new HomePage(driver);
-            search.SearchMobile(data.password);       
+            search.SearchMobile();       
        }
 
        [Test,Order(3)]
@@ -30,6 +30,6 @@ namespace Amazon.Test
             var address = new AddressPage(driver);
             address.EnterAddress();
             address.AddAddress();
-       }
+       } 
     }
 }

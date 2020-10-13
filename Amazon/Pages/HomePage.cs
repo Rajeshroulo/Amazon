@@ -9,7 +9,6 @@ namespace Amazon.Pages
 {
     public class HomePage
     {
-
         public IWebDriver driver;
         public HomePage(IWebDriver driver)
         {
@@ -26,32 +25,29 @@ namespace Amazon.Pages
         [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Samsung Guru Music 2 (SM-B310E, Blue)')]")]
         public IWebElement samsung;
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='buy-now-button']")]
-        public IWebElement buyNow;
+        [FindsBy(How = How.XPath, Using = "//input[@id='add-to-cart-button']")]
+        public IWebElement cart;
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='ap_password']")]
-        public IWebElement passWord;
+        [FindsBy(How = How.CssSelector, Using = "#hlb-ptc-btn-native")]
+        public IWebElement proceed;        
 
-        [FindsBy(How = How.Id, Using = "signInSubmit")]
-        public IWebElement login;
-
-
-        public void SearchMobile(string password)
+        public void SearchMobile()
         {
             searchBox.SendKeys("samsung guru music 2");
             Thread.Sleep(2000);
             search.Click();
-            Thread.Sleep(10000);
+            Thread.Sleep(8000);
             samsung.Click();
             List<string> windows = driver.WindowHandles.ToList();
             foreach (var mobilewindow in windows)
             {
                 driver.SwitchTo().Window(mobilewindow);
             }
-            Thread.Sleep(8000);
-            buyNow.Click();
+            Thread.Sleep(6000);
+            cart.Click();
+            Thread.Sleep(4000);
+            proceed.Click();
             Thread.Sleep(5000);
-            
-        }
+            }
     }
 }
