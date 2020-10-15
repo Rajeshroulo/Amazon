@@ -20,7 +20,7 @@ namespace Amazon.Base
         [OneTimeTearDown]
         public void CloseBrowser()
         {
-            driver.Quit();
+           driver.Quit();
         }
     }
 }

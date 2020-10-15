@@ -29,8 +29,8 @@ namespace Amazon.Pages
         public IWebElement options;
 
         [FindsBy(How = How.XPath, Using = "/ html[1] / body[1] / div[1] / div[3] / div[1] / div[1] / div[1] / div[1] / div[1] / div[2] / div[5] / div[1] / form[1] / span[1] / span[1] / span[1] / input[1]")]
-        public IWebElement cart;        
-
+        public IWebElement cart;
+        
         public void SearchMobile()
         {
             searchBox.SendKeys("samsung guru music 2");
@@ -47,7 +47,7 @@ namespace Amazon.Pages
             options.Click();
             Thread.Sleep(6000);
             cart.Click();
-            Thread.Sleep(5000);
-            }
+            Thread.Sleep(5000);            
+        }
     }
 }

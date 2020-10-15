@@ -29,7 +29,6 @@ namespace Amazon.Test
        {
             var address = new AddressPage(driver);
             address.EnterAddress();
-            address.AddAddress();
        } 
     }
 }
