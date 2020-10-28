@@ -24,18 +24,18 @@ namespace Amazon.Test
             search.SearchMobile();       
        }
 
-        [Test,Order(3)]
-        public void AmazonLogout()
-        {
-            var logout = new Logout(driver);
-            logout.AccountLogout();
-        }
-
-       [Test,Order(4)]
+       [Test, Order(3)]
        public void DeliveryAddress()
        {
             var address = new AddressPage(driver);
             address.EnterAddress();
-       } 
+       }
+
+       [Test,Order(4)]
+       public void AmazonLogout()
+       {
+            var logout = new Logout(driver);
+            logout.AccountLogout();
+       }       
     }
 }
