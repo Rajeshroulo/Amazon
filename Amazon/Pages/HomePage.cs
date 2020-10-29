@@ -25,8 +25,8 @@ namespace Amazon.Pages
         [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Samsung Guru Music 2 (SM-B310E, Blue)')]")]
         public IWebElement samsung;
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='buy-now-button']")]
-        public IWebElement buyNow;
+        [FindsBy(How = How.XPath, Using = "//input[@id='add-to-cart-button']")]
+        public IWebElement cart;
         
         public void SearchMobile()
         {
@@ -41,7 +41,7 @@ namespace Amazon.Pages
                 driver.SwitchTo().Window(mobilewindow);
             }
             Thread.Sleep(6000);
-            buyNow.Click();
+            cart.Click();
             Thread.Sleep(6000);
         }
     }
