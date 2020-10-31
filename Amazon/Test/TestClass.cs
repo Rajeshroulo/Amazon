@@ -36,6 +36,6 @@ namespace Amazon.Test
        {
             var logout = new Logout(driver);
             logout.AccountLogout();
-       }       
-    }
+       }      
+    } 
 }
