@@ -22,7 +22,7 @@ namespace Amazon.Pages
         [FindsBy(How = How.XPath, Using = "//header/div[@id='navbar']/div[@id='nav-belt']/div[2]/div[1]/form[1]/div[3]/div[1]/span[1]/input[1]")]
         public IWebElement search;
 
-        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Samsung Guru Music 2 (SM-B310E, Blue)')]")]
+        [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Samsung Guru Music 2 (SM-B310E, White)')]")]
         public IWebElement samsung;
 
         [FindsBy(How = How.XPath, Using = "//a[@id='buybox-see-all-buying-choices-announce']")]
