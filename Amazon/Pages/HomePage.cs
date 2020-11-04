@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Threading;
 
@@ -25,8 +24,8 @@ namespace Amazon.Pages
         [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Samsung Guru Music 2 (SM-B310E, White)')]")]
         public IWebElement samsung;
 
-        [FindsBy(How = How.XPath, Using = "//input[@id='add-to-cart-button']")]
-        public IWebElement cart;
+        [FindsBy(How = How.XPath, Using = "//a[@id='buybox-see-all-buying-choices-announce']")]
+        public IWebElement option;
         
         public void SearchMobile()
         {
@@ -41,7 +40,7 @@ namespace Amazon.Pages
                 driver.SwitchTo().Window(mobilewindow);
             }
             Thread.Sleep(6000);
-            cart.Click();
+            option.Click();
             Thread.Sleep(7000);
         }
     }
