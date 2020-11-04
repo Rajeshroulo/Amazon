@@ -12,10 +12,7 @@ namespace Amazon.Pages
             this.driver = driver;
             PageFactory.InitElements(driver, this);
         }
-
-        [FindsBy(How = How.XPath, Using = "//body/div[@id='a-page']/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[5]/div[1]/form[1]/span[1]/span[1]/span[1]/input[1]")]
-        public IWebElement cart;
-
+        
         [FindsBy(How = How.XPath, Using = "//a[@id='hlb-ptc-btn-native']")]
         public IWebElement proceed;
 
@@ -24,8 +21,6 @@ namespace Amazon.Pages
 
         public void EnterAddress()
         {
-            cart.Click();
-            Thread.Sleep(5000);
             proceed.Click();
             Thread.Sleep(9000);
             address.Click();
