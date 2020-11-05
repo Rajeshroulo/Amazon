@@ -30,6 +30,13 @@ namespace Amazon.Test
             var address = new AddressPage(driver);
             address.EnterAddress();
        }
-       
+
+        [Test, Order(4)]
+        public void AmazonLogout()
+        {
+            var logout = new Logout(driver);
+            logout.AccountLogout();
+        }
+
     } 
 }
