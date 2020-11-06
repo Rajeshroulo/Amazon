@@ -31,12 +31,12 @@ namespace Amazon.Test
             address.EnterAddress();
        }
 
-        [Test, Order(4)]
-        public void AmazonLogout()
-        {
+       [Test, Order(4)]
+       public void AmazonLogout()
+       {
             var logout = new Logout(driver);
             logout.AccountLogout();
-        }
+       } 
 
     } 
 }
