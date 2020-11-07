@@ -41,7 +41,7 @@ namespace Amazon.Pages
             }
             Thread.Sleep(6000);
             option.Click();
-            Thread.Sleep(7000);
+            Thread.Sleep(8000);
         }
     }
 }
