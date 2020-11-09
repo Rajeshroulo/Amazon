@@ -23,10 +23,7 @@ namespace Amazon.Pages
 
         [FindsBy(How = How.XPath, Using = "//span[contains(text(),'Samsung Guru Music 2 (Gold)')]")]
         public IWebElement samsung;
-        
-        [FindsBy(How = How.XPath, Using = "//a[@id='buybox-see-all-buying-choices-announce']")]
-        public IWebElement option;
-        
+                
         public void SearchMobile()
         {
             searchBox.SendKeys("samsung guru music 2");
@@ -40,8 +37,6 @@ namespace Amazon.Pages
                 driver.SwitchTo().Window(mobilewindow);
             }
             Thread.Sleep(6000);
-            option.Click();
-            Thread.Sleep(8000);
         }
     }
 }
